@@ -16,17 +16,6 @@ body {font-family: Verdana, Arial, sans-serif}
 a:link { 
   text-decoration: none; 
 }
-
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.sticky + .content {
-  padding-top: 100px;
-}
 body{
   color:#ffffff;  
 }
@@ -75,20 +64,5 @@ body{
 </body>
 </Contact>
 </div>
-
-<script>
-window.onscroll = function() {myFunction()};
-
-var header = document.getElementById("myHeader");
-var sticky = header.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
-</script>
 </body>
 </html>
