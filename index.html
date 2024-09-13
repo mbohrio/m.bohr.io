@@ -12,32 +12,38 @@
 <meta name="author" content="Jan Klein">
 <link rel="icon" type="image/x-icon" href="/Jan-Klein.ico">
 <style>
-h1 {
-      font-weight: bold;
-    }
-h2 {
-      font-weight: bold;
-    }
-h3 {
-      font-weight: bold;
-    }
-p {
-      font-weight: bold;
-    }
 body {font-family: Verdana, Arial, sans-serif}
 a:link { 
   text-decoration: none; 
 }
+.header {
+  padding: 5px 16px;
+  background: #000;
+  color: #f1f1f1;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 180px;
+}
+body{
+  color:#ffffff;  
+}
 </style>
 </head>
+<body style="background-color:#000000;">
 <center>
-<body>
-<div>
-  <header>
+<div class="header" id="myHeader">
     <h1><a href="https://m.bohr.io">m.bohr.io</a> | 
     <a href="#about">About</a> | 
     <a href="#contact">Contact</a><h1>
-  </header>
+</div>
+<div class="content">
   <div>
       <a href="https://www.youtube.com/watch?v=ymo_UGZsLG4&amp;list=PLd6DceIzErOkOgU-6eICk7auvaCunsTEv" target="_blank"><img src="/Jan-Klein.webp" alt="Jan Klein" width="380" height="380"></a>
       <h1>Jan Klein<h1>
@@ -50,7 +56,7 @@ a:link {
       <h1><a href="tel:+31685424358">Call</a> | <a href="mailto:xjanklein@gmail.com">E-Mail</a></h1>
       <h1><a href="https://wa.me/31685424358" target="_blank">WhatsApp</a></h1>
 <footer id="about">
-  <h2>About</h2>
+     <h2>About</h2>
   <h3>m.bohr.io | Jan Klein</h3>
   <p>WordPress Developer +20 Years</p>
   <p>Google Developer +20 Years</p>
@@ -72,4 +78,21 @@ a:link {
 </footer>
 </body>
 </Contact>
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+</body>
 </html>
